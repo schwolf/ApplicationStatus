@@ -2,6 +2,7 @@
 A SPA for generic application monitoring powered by React and Redux
 
 
+The Api is not part of this repository
 Example for Api response:
 
 {
