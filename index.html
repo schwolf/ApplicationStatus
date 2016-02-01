@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>
+	History
+</title><link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style type="text/css">
+        .container {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        span.ok, span.nok {
+            cursor: pointer;
+        }
+        span.ok {
+            color: green;
+        }
+        span.nok {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="app"></div>
+
+    <script type="text/javascript">
+        window.initialState = {"servers":[{"name":"Server1","apiUrl":"..."},{"name":"Server2","apiUrl":"..."},{"name":"Server3","apiUrl":"..."},{"name":"Server4","apiUrl":"..."}],"monitoringSteps":[{"key":"loadBalancerReply.Web.PageAxdRequester","value":"Page request"},{"key":"loadBalancerReply.Web.NullRefExceptionSeek","value":"NullRefs"}],"soundUrl":"/loadbalancerreply/sound/alert.mp3"};
+    </script>
+
+    <script src="/scripts/import/moment.min.js"></script>
+    <script src="/scripts/import/jquery.min.js"></script>
+    <script src="/scripts/import/bootstrap.min.js"></script>
+    <script src="/scripts/import/react.min.js"></script>
+    <script src="/scripts/import/react-dom.min.js"></script>
+    <script src="/scripts/import/redux.min.js"></script>
+    <script src="/scripts/import/react-redux.min.js"></script>
+    
+    <script src="/scripts/import/browser.min.js"></script>
+
+    <script type="text/babel" src="/scripts/App.jsx"></script>
+</body>
+</html>
