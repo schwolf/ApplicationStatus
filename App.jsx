@@ -9,7 +9,6 @@ class App extends React.Component {
 					servers={this.props.servers}
 					monitoringSteps={this.props.monitoringSteps}
 					soundUrl={this.props.soundUrl}
-					superSmart=<SmartComponent foo={'bar'}/>
 				/>
 				<ModalDialogContainer />
 			</div>
@@ -64,7 +63,6 @@ class Rows extends React.Component {
 							key={i}
 							onFlagSpanClick = { details => onFlagSpanClick(details) }
 							soundUrl = {soundUrl}
-							superSmart = {this.props.superSmart}
 						/>
 					);
 				})}
@@ -90,12 +88,6 @@ function MaxRowSelector(props) {
 	);
 }
 
-function SmartComponent(props) {
-	return (
-		<span>Nun Abba {props.foo}!</span>
-	);
-}
-
 
 // stateless function is enough for componentes which only need render()
 function Row(props) {
@@ -107,8 +99,7 @@ function Row(props) {
 						monitoringSteps = {props.monitoringSteps}
 						onFlagSpanClick = { details => props.onFlagSpanClick(details) }
 						soundUrl = {props.soundUrl}
-						superSmart = {props.superSmart}	
-					></StatusList>;
+					/>;
 	}
 	
 	return (
@@ -150,7 +141,7 @@ class StatusList extends React.Component {
 		else {
 			panelClass += 'panel-primary';
 		}
-				 
+		 
 		return (
 			<div className='col-md-6'>
 				<div className={panelClass}>
@@ -181,7 +172,6 @@ class StatusList extends React.Component {
 						</tbody>
 					</table>
 				</div>
-				{ this.props.superSmart }
 			</div>
 		);
 	}
